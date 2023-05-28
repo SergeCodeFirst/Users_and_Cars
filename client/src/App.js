@@ -1,30 +1,27 @@
 import './App.css';
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
+import Home from './View/Home'
+import Second from './View/Second'
 
 
 function App() {
-  const [grettings, setGrettings] = useState({});
-  
-  useEffect((req, res) => {
-    axios.get("http://localhost:8000/api")
-      .then(res => {
-        // console.log(res.data);
-        setGrettings(res.data);
-      })
-      .catch(err => {
-        console.log({error: err});
-      })
-  }, [])
-
   return (
     <div className="App">
-      <h1>Deploy</h1>
-      {/* <h2>My App: {grettings.msg}</h2>
-      <p>{grettings.results[0]}</p> */}
+      <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+
+        <Route exact path="/second">
+          <Second />
+        </Route>
+      </Switch>
+      </BrowserRouter>
     </div>
   );
 }
