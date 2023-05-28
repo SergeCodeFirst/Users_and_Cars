@@ -23,6 +23,7 @@ const Second = (props) => {
         <h1>Hellow from Second</h1>
         <h1>Deploy</h1>
         <h2>My App: {grettings.msg}</h2>
+        <h2>My App: {grettings.results}</h2>
         <Link to="/">Home</Link>
     </div>
 }
