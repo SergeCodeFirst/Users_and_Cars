@@ -23,8 +23,8 @@ function App() {
   return (
     <div className="App">
       <h1>Deploy</h1>
-      <h2>My App: {grettings.msg}</h2>
-      <p>{grettings.results[0]}</p>
+      {/* <h2>My App: {grettings.msg}</h2>
+      <p>{grettings.results[0]}</p> */}
     </div>
   );
 }
